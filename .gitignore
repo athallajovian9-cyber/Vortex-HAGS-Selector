@@ -1,0 +1,16 @@
+# build environment and Nuitka output
+_buildenv/
+__pycache__/
+*.build/
+*.dist/
+*.onefile-build/
+build/
+
+# runtime artifacts, not source
+hags_state.json
+games_user.json
+hags_report.txt
+HAGS_Restore.reg
+
+# the built binary ships as a release asset, not as a tracked file
+Vortex_HAGS_Selector.exe
