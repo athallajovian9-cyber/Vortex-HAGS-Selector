@@ -1,0 +1,8 @@
+# Batch files must keep CRLF in the repository itself.
+#
+# core.autocrlf is on for this machine, which strips the CR when a file is
+# committed. The working copy is then fine but the stored blob is LF, so anyone
+# who downloads the raw file gets a .bat that CMD mis-splits - it reports a syntax
+# error on a line that looks correct. Marking them as non-text stores the exact
+# bytes that were tested.
+*.bat -text
